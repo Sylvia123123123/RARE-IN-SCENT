@@ -1,0 +1,133 @@
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>rAre In scent</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            .custom-font {
+                font-family: "Bodoni Moda", serif; /* 使用 Bodoni Moda 字体 */
+            }
+            .highlight-font {
+                font-family: "Bodoni Moda", serif; /* 使用 Bodoni Moda 字体 */
+            }
+        </style>
+    </head>
+<body class="bg-white">
+    <header class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="w-1/3"></div>
+            <div class="w-1/3 text-center">
+                <a href="main.html">
+                    <h1 class="custom-font flex justify-center items-center"> <!-- 使用 flex 布局 -->
+                        <span class="text-3xl font-bold">R</span>
+                        <span class="text-3xl font-bold text-red-500">A</span>
+                        <span class="text-3xl font-bold">RE</span>
+                        <span class="text-3xl mx-1"> </span> <!-- 在 E 和 I 之间添加空格 -->
+                        <span class="text-3xl font-bold text-red-500">I</span>
+                        <span class="text-3xl font-bold">N SCENT</span>
+                    </h1>
+                </a>
+            </div>
+            <div class="w-1/3 flex justify-end space-x-4">
+                <i class="fas fa-search"></i>
+                <a href="login.html"><i class="far fa-user"></i></a>
+                <i class="far fa-star"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </header>
+    <nav class="border-b border-gray-200">
+        <ul class="flex justify-center space-x-8 py-4 text-sm">
+            <li><a href="介绍.html" style="text-decoration: underline;">AI定制</a></li>
+            <li><a href="初遇好礼.html#初遇好礼">初遇好礼</a></li>
+            <li><a href="活动.html#限时活动">限时活动</a></li>
+            <li><a href="index11.html#双人定制">双人定制</a></li>
+            <li><a href="index11.html#甄选礼盒">甄选礼盒</a></li>
+            <li><a href="index11.html#更多分类">更多分类</a></li>
+            <li><a href="index11.html#气味树洞">气味树洞</a></li>
+            <li><a href="会员.html#会员中心">会员中心</a></li>
+        </ul>
+    </nav>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <p class="text-gray-700 mb-4">您希望这款香水闻起来主要是什么基调？</p>
+            <div class="flex items-center">
+                <button class="p-2 rounded-l-md bg-white border border-r-0 border-gray-300" id="attachButton">
+                    <i class="fas fa-plus text-gray-400"></i>
+                </button>
+                
+                <select class="flex-grow border border-gray-300 p-2 focus:outline-none bg-white text-gray-700">
+                    <option value="" disabled selected>选择基调</option> <!-- 默认提示选项 -->
+                    <option value="花香">花香</option>
+                    <option value="果香">果香</option>
+                    <option value="木质">木质</option>
+                    <option value="香料">香料</option>
+                    <option value="清新">清新</option>
+                    <option value="东方">东方调</option>
+                    <option value="果仁">果仁调</option>
+                    <option value="烟熏">烟熏调</option>
+                    <option value="随机">随机</option>
+                </select>
+                
+                <button class="p-2 rounded-r-md bg-black text-white">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 弹窗 -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg p-6">
+                <h2 class="text-lg font-bold mb-4">提交附件</h2>
+                <input type="file" class="mb-4">
+                <div class="flex justify-end">
+                    <button id="closeButton" class="bg-gray-300 px-4 py-2 rounded">关闭</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded ml-2">提交</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('attachButton').addEventListener('click', function() {
+                document.getElementById('modal').classList.remove('hidden');
+            });
+        
+            document.getElementById('closeButton').addEventListener('click', function() {
+                document.getElementById('modal').classList.add('hidden');
+            });
+        </script>
+
+<div class="mb-4">
+    <h2 class="text-lg font-semibold text-gray-700 mb-4 flex items-center">
+        您希望以什么方式来丰富香味？
+        <i class="fas fa-sync-alt ml-2 text-gray-500"></i>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white rounded-lg shadow p-4 hover:bg-gray-100"> <!-- 添加 hover:bg-gray-100 -->
+            <i class="fas fa-file-alt text-gray-600 mb-2"></i>
+            <h3 class="font-semibold mb-2">意象游戏</h3>
+            <p class="text-sm text-gray-600">AI将提供一系列触发灵感的提问，填写任意词语的文字游戏，诞生意想不到的奇妙香氛。</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 hover:bg-gray-100"> <!-- 添加 hover:bg-gray-100 -->
+            <i class="fas fa-lightbulb text-gray-600 mb-2"></i>
+            <h3 class="font-semibold mb-2">故事记忆</h3>
+            <p class="text-sm text-gray-600">那个人，那段时光，那处旧址。输入一段珍贵的记忆，或者一个心中的故事，用气味收录你的情绪。</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 hover:bg-gray-100"> <!-- 添加 hover:bg-gray-100 -->
+            <i class="fas fa-tasks text-gray-600 mb-2"></i>
+            <h3 class="font-semibold mb-2">声形会香</h3>
+            <p class="text-sm text-gray-600">想知道气味如何形容相片、私语和音乐？点击上传附件，用香氛的钥匙打开感受的大门，实现五感互通。</p>
+        </div>
+    </div>
+</div>
+<img alt="A blonde woman with long hair looking to the side, next to a large Chanel Gabrielle perfume bottle. The background is a soft peachy-pink color." class="w-full" src="https://img.picui.cn/free/2024/09/22/66f012d4b4aaf.png"/>
+    </main>
+</body>
+</html>
